@@ -39,7 +39,7 @@ public class ChallengesActivityPage extends AppCompatActivity {
 
     public void connectDashboardPage(View view) {
 
-        Intent intent = new Intent(this, ActiveRewardsPage.class);
+        Intent intent = new Intent(this, ProgressChartWithRewards.class);
         startActivity(intent);
     }
 }
