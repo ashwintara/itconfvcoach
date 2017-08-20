@@ -24,7 +24,7 @@ public class HealthyFoodVideoActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vitality_age_video);
         VideoView view = (VideoView) findViewById(R.id.webView);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.healthyfoodchallenge;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.healthyfood;
         view.setVideoURI(Uri.parse(path));
         session = new Session(this.getApplicationContext()); //in oncreate
         view.start();
