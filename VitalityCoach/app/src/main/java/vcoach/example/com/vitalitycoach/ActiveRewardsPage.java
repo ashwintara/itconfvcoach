@@ -1,38 +1,39 @@
 package vcoach.example.com.vitalitycoach;
 
 
-import android.app.Fragment;
-import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * Created by ASHWINI2 on 14/08/2017.
  */
 
-public class ActiveRewardsPage extends AppCompatActivity {
-    private WebView mWebView;
-    MediaController media_Controller;
-    private Session session;//global variable
+public class ActiveRewardsPage extends AppCompatActivity implements OnMapReadyCallback {
+
+    static final LatLng RIVERSIDE_RUN = new LatLng(-26.748325, 27.828646);
+    static final LatLng VIRGIN_ACTIVE = new LatLng(-26.740728, 27.844084);
+    static final LatLng PARK_RUN = new LatLng(-26.757534, 27.844637);
+    static final LatLng RACE_EVENT = new LatLng(-26.721597, 27.822249);
+
+    MapView mapView;
+    GoogleMap map;
 
 
     @Override
@@ -40,77 +41,75 @@ public class ActiveRewardsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.active_rewards_page);
 
-        WebView myWebView  = (WebView) findViewById(R.id.webViewAR);
-        myWebView.getSettings().setAllowFileAccess(true);
-        myWebView.loadUrl("file:///android_asset/healthyfoodvideo.html");
-    myWebView.getSettings().setJavaScriptEnabled(true);
-        myWebView.setWebChromeClient(new WebChromeClient() {
-            public void onGeolocationPermissionsShowPrompt(String origin, android.webkit.GeolocationPermissions.Callback callback) {
-                callback.invoke(origin, true, false); }
-        });
-            myWebView.getSettings().setDomStorageEnabled(true);
+        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.googleMap);
+        mapFragment.getMapAsync(this);
+    }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
 
-    /*    mWebView = (WebView) findViewById(R.id.webView);
-        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        mWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-        mWebView.setBackgroundColor(Color.parseColor("#000000"));
-        mWebView.loadUrl("file:///android_asset/index.html");*/
+        googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
-
-}
-
-
-
-
-
-
-
-
-     /*   @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            View v = inflater.inflate(R.layout.active_rewards_page, container, false);
-
-            // Gets the MapView from the XML layout and creates it
-            mapView = (MapView) v.findViewById(R.id.mapview);
-            mapView.onCreate(savedInstanceState);
-
-            // Gets to GoogleMap from the MapView and does initialization stuff
-            map.getUiSettings().setMyLocationButtonEnabled(false);
-
-            // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
-            try {
-                MapsInitializer.initialize(this.getActivity());
-            } catch (Exception e) {
-                e.printStackTrace();
+            @Override
+            public View getInfoWindow(Marker arg0) {
+                return null;
             }
 
-            // Updates the location and zoom of the MapView
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(43.1, -87.9), 10);
-            map.animateCamera(cameraUpdate);
+            @Override
+            public View getInfoContents(Marker marker) {
 
-            return v;
-        }
+                LinearLayout info = new LinearLayout(getApplicationContext());
+                info.setOrientation(LinearLayout.VERTICAL);
 
-        @Override
-        public void onResume() {
-            mapView.onResume();
-            super.onResume();
-        }
+                TextView title = new TextView(getApplicationContext());
+                title.setTextColor(Color.BLACK);
+                title.setGravity(Gravity.CENTER);
+                title.setTypeface(null, Typeface.BOLD);
+                title.setText(marker.getTitle());
 
-        @Override
-        public void onDestroy() {
-            super.onDestroy();
-            mapView.onDestroy();
-        }
+                TextView snippet = new TextView(getApplicationContext());
+                snippet.setTextColor(Color.GRAY);
+                snippet.setText(marker.getSnippet());
 
-        @Override
-        public void onLowMemory() {
-            super.onLowMemory();
-            mapView.onLowMemory();
-        }*/
+                info.addView(title);
+                info.addView(snippet);
+
+                return info;
+            }
+        });
+
+        Marker m1 = googleMap.addMarker(new MarkerOptions()
+                .position(RIVERSIDE_RUN)
+                .title("RiverSide Sun")
+                .snippet("Wenning St & Emfuleni Dr, Vanderbijlpark")
+                .icon( BitmapDescriptorFactory.defaultMarker( BitmapDescriptorFactory.HUE_RED ) ) );
 
 
+        Marker m2 = googleMap.addMarker(new MarkerOptions()
+                .position(VIRGIN_ACTIVE)
+                .title("Virgin Active (100 pts)")
+                .snippet("Distance: 4km" + "\n" + "Location: Virgin Active Vanderbijl Park - Health Club")
+                .icon( BitmapDescriptorFactory.defaultMarker( BitmapDescriptorFactory.HUE_AZURE ) ));
+
+        Marker m3 = googleMap.addMarker(new MarkerOptions()
+                .position(PARK_RUN)
+                .title("Park Run (300 pts)")
+                .snippet("Distance: 4.5km" + "\n" +"Location: Heron Banks Golf Course, 73 Minnaar St")
+                .icon( BitmapDescriptorFactory.defaultMarker( BitmapDescriptorFactory.HUE_AZURE ) ));
+
+        Marker m4 = googleMap.addMarker(new MarkerOptions()
+                .position(RACE_EVENT)
+                .title("Race Event (800 pts)")
+                .snippet("Distance: 5.1km" + "\n" + "Location: Old Vaaltonians Sports Club, Abraham Kriel St")
+                .icon( BitmapDescriptorFactory.defaultMarker( BitmapDescriptorFactory.HUE_AZURE ) ));
+
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(m1.getPosition(), 12F);
+        googleMap.moveCamera(cu);
+    }
 }
+
+
+
+
+
 

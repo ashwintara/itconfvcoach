@@ -199,7 +199,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/tableLayout2"
                 android:adjustViewBounds="true"
-                android:onClick="connectVitalityAgePage"
+                android:onClick="connectActiveRewardsPage"
                 android:focusable="true"
                 android:scaleType="centerInside"
                 android:text="Play Vitality Age Game and earn points!"

@@ -146,11 +146,13 @@
         android:id="@+id/textView16"
         android:layout_width="341dp"
         android:layout_height="75dp"
+        android:layout_marginEnd="10dp"
         android:background="@color/cardview_light_background"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/text_active_rewards"
         tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
@@ -158,35 +160,62 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="10dp" />
 
+    <fragment
+        android:id="@+id/googleMap"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="337dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
 
+   <!-- <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="337dp"
+        android:layout_height="337dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="@drawable/map_12"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" /> -->
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/challenges_toolbar"
-        app:layout_constraintTop_toTopOf="@+id/challenges_toolbar" />
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="38dp"
+        android:paddingLeft="16dp"
+        android:text="Alternatively complete a 30 min HR workout with a fitness device:"
+        app:layout_constraintTop_toBottomOf="@+id/googleMap" />
 
-    <WebView
-        android:id="@+id/webViewAR"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="18dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp" />
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="38dp"
+        android:paddingLeft="16dp"
+        android:text="300 pts = 148 bpm avg HR (80%)"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="38dp"
+        android:paddingLeft="16dp"
+        android:text="200 pts = 128 bpm (70%):"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
 </android.support.constraint.ConstraintLayout>

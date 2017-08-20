@@ -13,18 +13,20 @@
 
     <EditText
         android:id="@+id/textPassword"
-        android:layout_width="188dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="168dp"
-        android:layout_marginLeft="19dp"
+        android:layout_width="199dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="149dp"
+        tools:layout_editor_absoluteY="368dp"
+        tools:layout_editor_absoluteX="112dp" />
 
     <EditText
         android:id="@+id/textUsername"
@@ -40,10 +42,10 @@
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         android:layout_marginEnd="3dp"
         app:layout_constraintRight_toRightOf="@+id/textPassword"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="127dp"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="3dp"
@@ -52,8 +54,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="63dp"
-        android:layout_height="54dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:srcCompat="@drawable/loginuser"
         app:layout_constraintRight_toLeftOf="@+id/imageView14"
         tools:layout_constraintTop_creator="1"
@@ -64,7 +66,10 @@
         app:layout_constraintLeft_toLeftOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/textUsername"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="1dp" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -79,14 +84,14 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         android:layout_marginEnd="2dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintTop_toBottomOf="@+id/imageView14"
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="64dp"
         app:layout_constraintLeft_toLeftOf="@+id/button2"
         android:layout_marginRight="2dp"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -112,25 +117,21 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="303dp"
+        android:layout_height="51dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
         android:onClick="connectMainPage"
         android:text="Log in"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/textPassword"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="15dp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView11"
@@ -141,9 +142,9 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="28dp" />
+        android:layout_marginLeft="38dp" />
 
     <TextView
         android:id="@+id/textView12"
@@ -151,14 +152,11 @@
         android:layout_height="0dp"
         android:text="Cant Log in?"
         android:layout_marginEnd="18dp"
-        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintTop_toTopOf="@+id/textView11"
         android:layout_marginRight="18dp" />
 
     <ImageView

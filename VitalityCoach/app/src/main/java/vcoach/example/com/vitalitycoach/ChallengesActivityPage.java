@@ -32,6 +32,11 @@ public class ChallengesActivityPage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void connectActiveRewardsPage(View view){
+        Intent intent = new Intent(this, ActiveRewardsPage.class);
+        startActivity(intent);
+    }
+
     public void connectHealthyFood(View view) {
         Intent intent = new Intent(this, HealthyFoodActivity.class);
         startActivity(intent);
