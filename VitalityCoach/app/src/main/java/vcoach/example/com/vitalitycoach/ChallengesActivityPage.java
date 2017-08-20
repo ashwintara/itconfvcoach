@@ -42,4 +42,9 @@ public class ChallengesActivityPage extends AppCompatActivity {
         Intent intent = new Intent(this, ProgressChartWithRewards.class);
         startActivity(intent);
     }
+    public void connectLeaderboard(View view) {
+
+        Intent intent = new Intent(this, Leaderboard.class);
+        startActivity(intent);
+    }
 }

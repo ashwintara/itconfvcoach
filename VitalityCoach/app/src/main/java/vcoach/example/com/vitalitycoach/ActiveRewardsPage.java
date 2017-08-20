@@ -42,7 +42,7 @@ public class ActiveRewardsPage extends AppCompatActivity {
 
         WebView myWebView  = (WebView) findViewById(R.id.webViewAR);
         myWebView.getSettings().setAllowFileAccess(true);
-        myWebView.loadUrl("file:///android_asset/HealthyFood.html");
+        myWebView.loadUrl("file:///android_asset/healthyfoodvideo.html");
     myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setWebChromeClient(new WebChromeClient() {
             public void onGeolocationPermissionsShowPrompt(String origin, android.webkit.GeolocationPermissions.Callback callback) {
