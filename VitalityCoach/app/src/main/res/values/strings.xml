@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Vitality Coach</string>
+    <string name="bronze_challenge">BRONZE CHALLENGE</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="any_other">Any other fitness Activity</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="facebook_app_id">483792138629394</string>
+    <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+    <item name="android:textColor">#9f5030</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">20dp</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:background">#4a9f30</item>
+
+
+</style>
+
+    <style name="Heading" parent="@android:style/TextAppearance.DeviceDefault.Large">
+        <item name="android:textColor">#9f5030</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">#4a9f30</item>
+
+    </style>
+
+    <string name="text_with_vitage">
+        \n<b>Play below Vitality Age Game and earn 2500 Points!</b>\n\n
+           Find out your Vitality Age to determine how old you are relative to your actual age.It measures all aspects of your wellness like exercise, nutrition and stress.
+
+    </string>
+
+    <string name="text_active_rewards">
+        \n<b>Check the nearest places where you can achieve points to complete your Active Rewards Goal!</b>\n\n
+    </string>
+
+    <string name="text_with_hf">
+        \n<b>Play below Vitality Healthy Food Game and earn 2500 Points!</b>\n\n
+        Activate your healthy food now!!
+
+    </string>
+    <string name="ar_Badge">
+        Congratulations on activating Active Rewards and completing Vitality Age!
+    </string>
+
+
+    <string name="text_congrats_vitage">
+        Congratulations on completing your Vitality Age!
+        \n\nKindly rate our member journey experience.
+        \n And share your Vitality Age digital Badge on Facebook to motivate others!
+
+    </string>
+</resources>

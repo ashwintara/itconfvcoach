@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:backgroundTint="@color/cardview_light_background"
+    tools:context="vcoach.example.com.vitalitycoach.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/challenges_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="?android:attr/colorFocusedHighlight"
+        android:elevation="4dp"
+        android:theme="@style/Base.Theme.AppCompat.Light"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/cardview_light_background"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@mipmap/coach"
+        app:title="VITALITY COACH"
+        tools:background="?android:attr/colorFocusedHighlight"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:titleTextColor="@color/cardview_light_background" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_below="@+id/challenges_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="366dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/chad_round" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/cardview_light_background">
+
+                <TableRow
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background">
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:inputType="text"
+                        android:text="Hi Wayde van Neikerk!" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/cardview_light_background"
+                        android:padding="5dp"
+                        android:text="Your Vitality status" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background">
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:text="BLUE" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/editText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:text="Vitality points: 2500"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"></EditText>
+                </TableRow>
+
+
+            </TableLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_light_background"
+        android:fontFamily="sans-serif"
+        android:inputType="text|textCapCharacters"
+        android:text="  Fitness"
+        android:textAppearance="@style/SettingCodeFontBold"
+        android:layout_below="@+id/swimmingSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Switch
+        android:id="@+id/swimmingSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/runningSwitch"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Swimming" />
+
+
+    <Switch
+        android:id="@+id/runningSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyclingSwitch"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Running" />
+
+    <Switch
+        android:id="@+id/cyclingSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Cycling" />
+
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cyclingSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cardview_light_background"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:text="  Health"
+        android:textAppearance="@style/SettingCodeFontBold" />
+
+
+    <Switch
+        android:id="@+id/stopSmokingSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/switch2"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Stop Smoking" />
+
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText4"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Lose Weight" />
+
+
+    <Switch
+        android:id="@+id/freeFlightsSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Free Flights" />
+
+    <Switch
+        android:id="@+id/freeCoffeeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"
+        android:text="Free Coffee"
+        android:layout_above="@+id/freeFlightsSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="  Rewards / Benefits"
+        android:textAppearance="@style/SettingCodeFontBold"
+        android:layout_above="@+id/freeCoffeeSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Button"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:onClick="sendMessage"
+        android:text="Customize your Challenge!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/running_man_bronze"
+        android:layout_below="@+id/tableLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/editText5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

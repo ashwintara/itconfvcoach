@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/notachieved" />
+    <TextView
+        android:id="@+id/artextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageIcon" />
+
+    <TextView
+        android:id="@+id/artextView2"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="16sp"
+        android:layout_below="@+id/aractivate"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/artextView3"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/aractivate"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/aractivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="Activate" />
+
+</RelativeLayout>

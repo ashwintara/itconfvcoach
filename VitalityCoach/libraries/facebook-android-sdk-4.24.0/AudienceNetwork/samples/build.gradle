@@ -1,0 +1,41 @@
+
+apply plugin: 'android-library'
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath group:'com.android.tools.build', name:'gradle', version: '2.3.3'
+        compile 'com.android.support:support-v4:19.1.+'
+        compile files('libs/bolts.jar')
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+}
