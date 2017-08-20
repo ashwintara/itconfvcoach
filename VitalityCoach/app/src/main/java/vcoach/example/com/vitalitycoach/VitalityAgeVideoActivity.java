@@ -27,19 +27,12 @@ public class VitalityAgeVideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vitality_age_video);
         VideoView view = (VideoView) findViewById(R.id.webView);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.vitalityagevideo;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.vitality_age;
         view.setVideoURI(Uri.parse(path));
-        session = new Session(this.getApplicationContext()); //in oncreate
+        session = new Session(this.getApplicationContext());
         view.start();
 
 
-
-
-    /*    mWebView = (WebView) findViewById(R.id.webView);
-        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        mWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-        mWebView.setBackgroundColor(Color.parseColor("#000000"));
-        mWebView.loadUrl("file:///android_asset/index.html");*/
 
         view.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
@@ -57,35 +50,6 @@ public class VitalityAgeVideoActivity extends AppCompatActivity {
     }
 
 }
-   /*
-        mWebView = (WebView)findViewById(R.id.webView);
-       // mWebView.setWebViewClient(new WebViewClient());
-        mWebView.setWebChromeClient(new WebChromeClient());
-        mWebView.getSettings().setAllowFileAccess(true);
-        mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.getSettings().setDomStorageEnabled(true);
-        mWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        mWebView.loadUrl("file:///android_asset/index.html");*/
-       /* WebSettings webSettings=mWebView.getSettings();
-        mWebView.setWebChromeClient(new WebChromeClient());
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setPluginState(WebSettings.PluginState.ON);
-        webSettings.setAllowFileAccess(true);
-        mWebView.getSettings().setAppCacheMaxSize( 10 * 1024 * 1024 );
-        mWebView.getSettings().setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath() );
-        mWebView.getSettings().setAllowFileAccess( true );
-        mWebView.getSettings().setAppCacheEnabled( true );
-        mWebView.getSettings().setCacheMode( WebSettings.LOAD_DEFAULT );*/
-        //
-
-      /*  mWebView.postDelayed(new Runnable() {
-
-            @Override
-            public void run()
-    {*/
-
-//        }, 500);
 
 
 

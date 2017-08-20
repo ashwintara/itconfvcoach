@@ -108,9 +108,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ChallengesActivityPage" />
         </activity>
-<!--will be excluded later stage-->
-        <activity android:name=".ChallengesPage"
-            android:parentActivityName=".LoginActivity" >
+
+        <activity android:name=".Leaderboard"
+            android:parentActivityName=".ChallengesActivityPage"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity"
