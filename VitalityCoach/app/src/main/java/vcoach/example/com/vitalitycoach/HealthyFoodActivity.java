@@ -1,6 +1,8 @@
 package vcoach.example.com.vitalitycoach;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -37,7 +39,28 @@ public class HealthyFoodActivity extends AppCompatActivity {
     }
 
     public void startHealthyFoodVideo(View view) {
-        Intent intent = new Intent(this, HealthyFoodVideoActivity.class);
-        startActivity(intent);
+        Intent i = new Intent(HealthyFoodActivity.this, VitAgeActivityShare.class);
+        startActivity(i);
+        new StartFlashTask().execute();
+    }
+
+
+    private class StartFlashTask extends AsyncTask<Void, Void, Void>{
+
+        protected void onProgressUpdate(String... params) {
+        }
+
+        protected void onPostExecute(Long result) {
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            Intent i;
+            PackageManager manager = getPackageManager();
+            i = manager.getLaunchIntentForPackage("air.HealthyFoodAndroid");
+            i.addCategory(Intent.CATEGORY_LAUNCHER);
+            startActivity(i);
+            return null;
+        }
     }
 }

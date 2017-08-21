@@ -1,7 +1,9 @@
 package vcoach.example.com.vitalitycoach;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -44,9 +46,30 @@ public class VitalityAgeActivity extends AppCompatActivity {
 
     }
 
-    public void startVitalityAgeVideo(View view){
-        Intent intent = new Intent(this, VitalityAgeVideoActivity.class);
-        startActivity(intent);
+    public void startVitalityAgeVideo(View view) {
+        Intent i = new Intent(VitalityAgeActivity.this, VitAgeActivityShare.class);
+        startActivity(i);
+        new StartFlashTask().execute();
+    }
+
+
+    private class StartFlashTask extends AsyncTask<Void, Void, Void> {
+
+        protected void onProgressUpdate(String... params) {
+        }
+
+        protected void onPostExecute(Long result) {
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            Intent i;
+            PackageManager manager = getPackageManager();
+            i = manager.getLaunchIntentForPackage("air.VitalityAgeAndroid");
+            i.addCategory(Intent.CATEGORY_LAUNCHER);
+            startActivity(i);
+            return null;
+        }
     }
 
 
