@@ -84,14 +84,6 @@
         </activity>
 
 
-        <activity android:name=".HealthyFoodVideoActivity"
-            android:parentActivityName=".HealthyFoodActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HealthyFoodActivity"
-                android:theme="@style/Theme.AppCompat.Dialog.Alert"/>
-        </activity>
-
         <activity android:name=".ProgressChartNoRewards"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Dialog.Alert">

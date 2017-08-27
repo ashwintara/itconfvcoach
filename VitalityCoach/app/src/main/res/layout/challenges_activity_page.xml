@@ -42,19 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="95dp"
         android:cropToPadding="true"
-        app:srcCompat="@drawable/runningman_bronze_2"
-        android:layout_below="@+id/challenges_toolbar"
+        app:srcCompat="@drawable/running_man_bronze"
+        android:layout_above="@+id/textView31"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
-
-
-
-
-
-
-
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -62,7 +54,7 @@
         android:background="@drawable/com_facebook_button_login_silver_background"
         tools:background="#f0f0f0"
         android:id="@+id/tableLayout3"
-        android:layout_above="@+id/tableLayoutar"
+        android:layout_below="@+id/textView18"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -104,7 +96,7 @@
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
-                android:layout_height="55dp"
+                android:layout_height="40dp"
                 android:layout_alignTop="@+id/imageButton2"
                 android:layout_toEndOf="@+id/textView19"
                 android:layout_toRightOf="@+id/textView19"
@@ -128,7 +120,6 @@
                 android:visibility="visible"
                 app:srcCompat="@drawable/troply_small"
                 tools:background="@color/cardview_light_background" />
-
         </TableRow>
  <ImageView
     android:id="@+id/line1"
@@ -144,7 +135,7 @@
         android:background="@drawable/com_facebook_button_login_silver_background"
         tools:background="#f0f0f0"
         android:id="@+id/tableLayoutar"
-        android:layout_above="@+id/tableRow"
+        android:layout_below="@+id/tableLayout3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -199,14 +190,15 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/tableLayout2"
                 android:adjustViewBounds="true"
-                android:onClick="connectActiveRewardsPage"
                 android:focusable="true"
+                android:onClick="connectActiveRewardsPage"
                 android:scaleType="centerInside"
                 android:text="Play Vitality Age Game and earn points!"
                 android:visibility="visible"
                 app:srcCompat="@drawable/troply_small"
                 tools:background="@color/cardview_light_background" />
         </TableRow>
+
         <ImageView
             android:id="@+id/line2"
             android:layout_width="match_parent"
@@ -214,14 +206,6 @@
             app:srcCompat="@drawable/line" />
 
     </TableLayout>
-
-
-
-
-
-
-
-
 
     <TextView
         android:id="@+id/seemore"
@@ -233,14 +217,7 @@
         tools:background="@color/cardview_light_background"
         android:layout_above="@+id/dashboards"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="31dp" />
-
-
-
-
-
-
+        android:layout_alignParentStart="true" />
 
 
     <TextView
@@ -249,7 +226,7 @@
         android:layout_height="30dp"
         android:text="  Choose one of the steps below to reach Bronze:"
         android:textSize="15sp"
-        android:layout_above="@+id/tableLayout3"
+        android:layout_below="@+id/textView17"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -259,9 +236,10 @@
         android:layout_height="wrap_content"
         android:text="  Next Steps"
         android:textSize="20sp"
-        android:layout_above="@+id/textView18"
+        android:layout_below="@+id/textViewPoints"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="9dp" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -272,7 +250,7 @@
         tools:background="#ffffff"
         tools:textAlignment="?android:attr/backgroundDimAmount"
         android:id="@+id/tableRow"
-        android:layout_above="@+id/seemore"
+        android:layout_below="@+id/tableLayoutar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -362,7 +340,7 @@
             <ImageView
                 android:id="@+id/dashboard"
                 android:layout_width="120dp"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/tableLayout3"
                 android:clickable="true"
                 android:focusable="true"
@@ -375,13 +353,13 @@
             <ImageView
                 android:id="@+id/imageView15"
                 android:layout_width="110dp"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 app:srcCompat="@color/white" />
 
             <ImageView
                 android:id="@+id/leaderboard"
                 android:layout_width="120dp"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/tableLayout3"
                 android:onClick="connectLeaderboard"
                 android:paddingLeft="15dp"
@@ -425,6 +403,48 @@
     </TableLayout>
 
 
+    <TextView
+        android:id="@+id/bronze_challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="BRONZE CHALLENGE"
+        android:textAppearance="@style/Heading"
+        android:textStyle="bold"
+        tools:text="BRONZE CHALLENGE"
+        android:layout_below="@+id/challenges_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="61dp" />
 
+    <ProgressBar
+        android:id="@+id/horizontalProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/custom_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:minHeight="30dp"
+        android:minWidth="200dp"
+        android:progress="1"
+        android:layout_below="@+id/textView31"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000 more points to get to Bronze"
+        android:layout_below="@+id/bronze_challenge"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontalProgressBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

@@ -20,17 +20,15 @@ public class HealthyFoodActivity extends AppCompatActivity {
     VideoView simpleVideoView;
     DisplayMetrics dm;
     SurfaceView sur_View;
-    private Session session;//global variable
+    private SessionManager sessionManager;//global variable
 
     MediaController media_Controller;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        session = new Session(this.getApplicationContext());
         super.onCreate(savedInstanceState);
         {
-            Log.d("Android: session", session.isVitageCompleted() + "");
             setContentView(R.layout.healthy_food);
         }
 

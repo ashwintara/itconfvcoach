@@ -1,7 +1,9 @@
 package vcoach.example.com.vitalitycoach;
 
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,14 +23,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.challenges_toolbar);
         setSupportActionBar(myToolbar);
-
+        SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean("vit_age_completed", false); // Storing boolean - true/false
+        editor.putBoolean("hf_completed", false); // Storing boolean - true/false
+        editor.putLong("vit_points", 10000); // Storing long
+        editor.commit();
     }
-
-    public void savePreferences(View view){
-
-
-    }
-
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
@@ -35,15 +37,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   /* public void startService(View view) {
-        startService(new Intent(getBaseContext(), FacebookIntegrationService.class));
-    }
-
-    // Method to stop the service
-    public void stopService(View view) {
-        stopService(new Intent(getBaseContext(), FacebookIntegrationService.class));
-    }*/
-
-
- //  image.setImageResource(R.drawable.dsada)
 }
