@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -72,7 +73,7 @@ public class SharingActivity extends AppCompatActivity {
         Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.healthy_food_badge);
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
-                .setCaption("Congratulations on activating your Vitality Healthy Food benefit and earning your Vitality Healthy Food Badge!")
+                .setCaption("Congratulations on activating your Benefit and earning your Badge!")
                 .build();
 
         SharePhotoContent content = new SharePhotoContent.Builder()
@@ -83,11 +84,13 @@ public class SharingActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int responseCode, Intent data)
     {
         super.onActivityResult(requestCode, responseCode, data);
         callbackManager.onActivityResult(requestCode, responseCode, data);
+        Toast.makeText(this, "Congratulations! You shared your badge on facebook!", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, VitAgeActivityShare.class);
         startActivity(intent);
     }

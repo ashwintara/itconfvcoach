@@ -24,27 +24,29 @@ public class ChallengesActivityPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.challenges_activity_page);
-        SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-        Toast.makeText(this, "Vitality Points:" + sharedpreferences.getLong("vit_points", 0), Toast.LENGTH_LONG).show();
         progressBar = (ProgressBar) findViewById(R.id.horizontalProgressBar);
         textView = (TextView) findViewById(R.id.textViewPoints);
+         SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+         long vitPoints= sharedpreferences.getLong("vit_points",0);
+            final long progressMeter=vitPoints/100;
 
-        new Thread(new Runnable() {
+                new Thread(new Runnable() {
             public void run() {
-                while (progressStatus < 50) {
+                while (progressStatus < progressMeter) {
                     progressStatus += 1;
                     // Update the progress bar and display the
                     //current value in the text view
                     handler.post(new Runnable() {
                         public void run() {
                             progressBar.setProgress(progressStatus);
-                            textView.setText("Points: "+(progressStatus*100));
+                                textView.setText("Your Vitality Points: "+(progressStatus*100));
                         }
                     });
                     try {
                         // Sleep for 200 milliseconds.
-                        Thread.sleep(20);
+                        Thread.sleep(12);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -54,7 +56,9 @@ public class ChallengesActivityPage extends AppCompatActivity {
 
 
     }
+
     public void connectVitalityAgePage(View view) {
+
         Intent intent = new Intent(this, VitalityAgeActivity.class);
         startActivity(intent);
     }
@@ -79,4 +83,15 @@ public class ChallengesActivityPage extends AppCompatActivity {
         Intent intent = new Intent(this, Leaderboard.class);
         startActivity(intent);
     }
+
+
+
+
+
+
+    public void updateSharedPrefsVitalityAge(){
+
+    }
+
+
 }

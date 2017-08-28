@@ -23,12 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.challenges_toolbar);
         setSupportActionBar(myToolbar);
-        SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean("vit_age_completed", false); // Storing boolean - true/false
-        editor.putBoolean("hf_completed", false); // Storing boolean - true/false
-        editor.putLong("vit_points", 10000); // Storing long
-        editor.commit();
+
     }
 
     /** Called when the user taps the Send button */

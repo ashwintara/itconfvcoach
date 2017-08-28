@@ -8,30 +8,32 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.Toast;
 
 /**
  * Created by ASHWINI2 on 11/08/2017.
  */
 
 public class VitAgeActivityShare extends AppCompatActivity {
-    DisplayMetrics dm;
-    SurfaceView sur_View;
-    private SessionManager sessionManager;//global variable
-
-    MediaController media_Controller;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        sessionManager = new SessionManager(this.getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vit_age_share);
-        ImageButton fbShare= (ImageButton)findViewById(R.id.fbshare);
 
-
-        //  Uri uri = Uri.parse("https://s3.ap-south-1.amazonaws.com/vitalitycoachbucket/IMG_4901.mp4");
 
     }
+
+
+
+    public void backToChallenges(View view) {
+
+        Intent i = new Intent(VitAgeActivityShare.this, ChallengesActivityPage.class);
+        startActivity(i);
+
+    }
+
 
     public void shareFB(View view){
         Intent intent = new Intent(this, SharingActivity.class);

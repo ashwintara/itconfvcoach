@@ -1,6 +1,7 @@
 package vcoach.example.com.vitalitycoach;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -36,9 +37,18 @@ public class LoginActivity extends AppCompatActivity {
         }
         else{
             Intent intent = new Intent(this, MainActivity.class);
+            setinitialSharedPres();
             startActivity(intent);
         }
 
+    }
+    public void setinitialSharedPres(){
+        SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean("vit_age_completed", false); // Storing boolean - true/false
+        editor.putBoolean("hf_completed", false); // Storing boolean - true/false
+        editor.putLong("vit_points", 5000); // Storing long
+        editor.commit();
     }
 
 

@@ -1,6 +1,7 @@
 package vcoach.example.com.vitalitycoach;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 /**
@@ -17,12 +19,6 @@ import android.widget.VideoView;
  */
 
 public class HealthyFoodActivity extends AppCompatActivity {
-    VideoView simpleVideoView;
-    DisplayMetrics dm;
-    SurfaceView sur_View;
-    private SessionManager sessionManager;//global variable
-
-    MediaController media_Controller;
 
 
     @Override
@@ -31,15 +27,14 @@ public class HealthyFoodActivity extends AppCompatActivity {
         {
             setContentView(R.layout.healthy_food);
         }
-
-        //  Uri uri = Uri.parse("https://s3.ap-south-1.amazonaws.com/vitalitycoachbucket/IMG_4901.mp4");
-
     }
 
     public void startHealthyFoodVideo(View view) {
         Intent i = new Intent(HealthyFoodActivity.this, VitAgeActivityShare.class);
+        updateSharedPrefsHF();
         startActivity(i);
         new StartFlashTask().execute();
+
     }
 
 
@@ -59,6 +54,24 @@ public class HealthyFoodActivity extends AppCompatActivity {
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
             return null;
+        }
+    }
+
+    public void updateSharedPrefsHF() {
+        SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        Boolean isHealthyFoodCompleted = sharedpreferences.getBoolean("hf_completed", false);
+        {
+            if (!isHealthyFoodCompleted) {
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean("hf_completed", true); // Storing boolean - true/false
+
+                long vitPoints = sharedpreferences.getLong("vit_points", 0);
+                long newVitPoints = vitPoints + 2500;
+                //update vitality points
+                editor.putLong("vit_points", newVitPoints); // Storing long
+                editor.commit();
+            }
+
         }
     }
 }
