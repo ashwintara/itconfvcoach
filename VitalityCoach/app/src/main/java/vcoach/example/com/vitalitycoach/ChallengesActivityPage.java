@@ -2,14 +2,23 @@ package vcoach.example.com.vitalitycoach;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by ASHWINI2 on 18/07/2017.
@@ -20,6 +29,10 @@ public class ChallengesActivityPage extends AppCompatActivity {
     private int progressStatus = 0;
     private TextView textView;
     private Handler handler = new Handler();
+    ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +43,11 @@ public class ChallengesActivityPage extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textViewPoints);
          SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
          long vitPoints= sharedpreferences.getLong("vit_points",0);
-            final long progressMeter=vitPoints/100;
+           final long progressMeter=vitPoints/100;
 
                 new Thread(new Runnable() {
             public void run() {
-                while (progressStatus < progressMeter) {
+                while (progressStatus < progressMeter ) {
                     progressStatus += 1;
                     // Update the progress bar and display the
                     //current value in the text view
@@ -55,8 +68,20 @@ public class ChallengesActivityPage extends AppCompatActivity {
         }).start();
 
 
-    }
+        //set the alternative text on for See More...option
 
+      ;
+      //  TableLayout firstTable=(TableLayout)findViewById(R.id.firstTable) ;
+        Boolean isVitAgeCompleted = sharedpreferences.getBoolean("vit_age_completed", false);
+
+if(!isVitAgeCompleted){
+}
+
+
+
+
+
+    }
     public void connectVitalityAgePage(View view) {
 
         Intent intent = new Intent(this, VitalityAgeActivity.class);
@@ -85,13 +110,6 @@ public class ChallengesActivityPage extends AppCompatActivity {
     }
 
 
-
-
-
-
-    public void updateSharedPrefsVitalityAge(){
-
-    }
 
 
 }

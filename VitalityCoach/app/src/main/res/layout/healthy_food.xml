@@ -30,16 +30,31 @@
         android:layout_alignParentEnd="true"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/myCoordinatorLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="150dp"
+        android:layout_height="139dp"
+        app:srcCompat="@drawable/heart_trophy"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="6dp"
+        android:layout_height="59dp"
         android:fontFamily="sans-serif"
         android:paddingTop="5dp"
         android:text=" Complete Healthy Food "
@@ -47,51 +62,20 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="57dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        android:layout_marginEnd="57dp"
         app:layout_constraintRight_toRightOf="@+id/textView16"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="174dp"
         app:layout_constraintTop_toBottomOf="@+id/challenges_toolbar"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="2dp"
-        app:layout_constraintLeft_toRightOf="@+id/imageView13"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="6dp" />
+        android:layout_marginBottom="173dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView16"
+        android:layout_marginLeft="57dp"
+        android:layout_marginRight="57dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="45dp"
-        android:layout_height="0dp"
-        app:srcCompat="@drawable/hf_enabled"
-        app:layout_constraintRight_toLeftOf="@+id/textView14"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginTop="2dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/challenges_toolbar"
-        app:layout_constraintTop_toTopOf="@+id/textView13"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="17dp" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="216dp"
-        android:layout_height="32dp"
-        android:fontFamily="sans-serif"
-        android:paddingTop="5dp"
-        android:text="2500 points"
-        android:textAppearance="@style/Heading"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="47dp"
-        app:layout_constraintTop_toBottomOf="@+id/challenges_toolbar"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
@@ -108,42 +92,31 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        android:layout_marginTop="87dp"
+        app:layout_constraintTop_toBottomOf="@+id/challenges_toolbar"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
+        android:layout_marginBottom="87dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="220dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="60dp"
-        android:fontFamily="sans-serif"
-        android:text="HEALTHY FOOD GAME"
-        android:textAppearance="@style/Heading"
+
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="200dp"
+        android:layout_height="59dp"
+        android:focusable="true"
+        android:onClick="startHealthyFoodVideo"
+        app:srcCompat="@drawable/playgamenow"
+        android:scaleType="centerInside"
+        android:background="@color/cardview_light_background"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="77dp"
-        android:layout_marginRight="61dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="135dp"
-        android:layout_height="129dp"
-        android:layout_marginBottom="41dp"
-        android:focusable="true"
-        android:onClick="startHealthyFoodVideo"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/troply_button"
-        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        android:layout_marginBottom="105dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/myCoordinatorLayout"
@@ -175,26 +148,19 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="319dp"
+        android:layout_width="0dp"
         android:layout_height="121dp"
-        android:layout_marginEnd="10dp"
         android:background="@color/cardview_light_background"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/text_with_hf"
         tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        android:layout_marginStart="10dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        android:layout_marginTop="52dp"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginBottom="59dp"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>

@@ -83,6 +83,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/cardview_light_background"
                         android:inputType="text"
+                        android:padding="5dp"
                         android:text="Hi Wayde van Neikerk!" />
                 </TableRow>
 
@@ -94,7 +95,7 @@
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:background="@color/cardview_light_background"
                         android:padding="5dp"
                         android:text="Your Vitality status" />
@@ -106,6 +107,7 @@
                         android:background="@color/cardview_light_background"
                         android:inputType="textPersonName"
                         android:text="BLUE"
+                        android:padding="5dp"
                         android:textColor="#40aefc" />
                 </TableRow>
 
@@ -122,7 +124,7 @@
                         android:background="@color/cardview_light_background"
                         android:inputType="textPersonName"
                         android:padding="5dp"
-                        android:text="Vitality points: 2500"
+                        android:text="Vitality points: 5000"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"></TextView>
                 </TableRow>
 
@@ -153,22 +155,24 @@
         android:id="@+id/swimmingSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/runningSwitch"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
-        android:text="Swimming" />
+        android:padding="10dp"
+        android:text="Swimming"
+        android:layout_below="@+id/runningSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
     <Switch
         android:id="@+id/runningSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cyclingSwitch"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
-        android:text="Running" />
+        android:padding="10dp"
+        android:text="Running"
+        android:layout_below="@+id/cyclingSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Switch
         android:id="@+id/cyclingSwitch"
@@ -178,7 +182,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
+        android:padding="10dp"
         android:text="Cycling" />
 
 
@@ -200,12 +204,12 @@
         android:id="@+id/stopSmokingSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/switch2"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
-        android:text="Stop Smoking" />
+        android:padding="10dp"
+        android:text="Stop Smoking"
+        android:layout_below="@+id/switch2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
     <Switch
@@ -216,7 +220,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText4"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
+        android:padding="10dp"
         android:text="Lose Weight" />
 
 
@@ -229,7 +233,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
+        android:padding="10dp"
         android:text="Free Flights" />
 
     <Switch
@@ -237,7 +241,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:padding="5dp"
+        android:padding="10dp"
         android:text="Free Coffee"
         android:layout_above="@+id/freeFlightsSwitch"
         android:layout_alignParentLeft="true"
@@ -268,15 +272,17 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         app:srcCompat="@drawable/running_man_bronze"
         android:layout_below="@+id/tableLayout2"
         android:layout_above="@+id/editText5"
+        android:padding="3dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

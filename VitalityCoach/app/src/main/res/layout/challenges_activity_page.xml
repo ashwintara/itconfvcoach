@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/com_facebook_button_login_silver_background"
-        android:layout_weight="1"
-        tools:background="#f0f0f0"
-        >
+    android:layout_weight="1"
+    tools:background="#f0f0f0">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/challenges_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="?android:attr/colorFocusedHighlight"
         android:elevation="4dp"
         android:theme="@style/Base.Theme.AppCompat.Light"
         android:title="@string/app_name"
@@ -43,286 +40,34 @@
         android:layout_height="95dp"
         android:cropToPadding="true"
         app:srcCompat="@drawable/running_man_bronze"
-        android:layout_above="@+id/textView31"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="11dp" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/com_facebook_button_login_silver_background"
-        tools:background="#f0f0f0"
-        android:id="@+id/tableLayout3"
-        android:layout_below="@+id/textView18"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            tools:background="#ffffff"
-            tools:textAlignment="?android:attr/backgroundDimAmount">
-
-            <ImageView
-                android:id="@+id/arimage"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/sktext"
-                android:paddingRight="5dp"
-                android:paddingTop="5dp"
-                app:srcCompat="@drawable/heartsmall"
-                tools:background="@color/cardview_light_background" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="175dp"
-                android:layout_height="55dp"
-                android:layout_alignTop="@+id/imageView18"
-                android:layout_toEndOf="@+id/skimage"
-                android:layout_toRightOf="@+id/skimage"
-                android:paddingLeft="10dp"
-                android:paddingTop="15dp"
-                android:text="Complete Vitality Age"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                tools:background="@color/cardview_light_background" />
-
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignTop="@+id/imageButton2"
-                android:layout_toEndOf="@+id/textView19"
-                android:layout_toRightOf="@+id/textView19"
-                android:paddingTop="15dp"
-                android:text="2500 pts      "
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                tools:background="@color/cardview_light_background" />
-
-            <ImageView
-                android:id="@+id/vaactivatebutton"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/tableLayout2"
-                android:adjustViewBounds="true"
-                android:focusable="true"
-                android:onClick="connectVitalityAgePage"
-                android:scaleType="centerInside"
-                android:text="Play Vitality Age Game and earn points!"
-                android:visibility="visible"
-                app:srcCompat="@drawable/troply_small"
-                tools:background="@color/cardview_light_background" />
-        </TableRow>
- <ImageView
-    android:id="@+id/line1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:srcCompat="@drawable/line" />
-
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/com_facebook_button_login_silver_background"
-        tools:background="#f0f0f0"
-        android:id="@+id/tableLayoutar"
-        android:layout_below="@+id/tableLayout3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            tools:background="#ffffff"
-            tools:textAlignment="?android:attr/backgroundDimAmount">
-
-            <ImageView
-                android:id="@+id/activerewardsimage"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/tableLayout3"
-                android:paddingTop="5dp"
-                app:srcCompat="@drawable/activerewards"
-                tools:background="@color/cardview_light_background" />
-
-            <TextView
-                android:id="@+id/artext"
-                android:layout_width="175dp"
-                android:layout_height="55dp"
-                android:layout_alignLeft="@+id/tableLayout5"
-                android:layout_alignStart="@+id/tableLayout5"
-                android:layout_below="@+id/tableLayout3"
-                android:paddingLeft="10dp"
-                android:paddingTop="15dp"
-                android:text="Activate Active Rewards"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                tools:background="@color/cardview_light_background" />
-
-            <TextView
-                android:id="@+id/textViewar20"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_alignTop="@+id/imageButton2"
-                android:layout_toEndOf="@+id/textView19"
-                android:layout_toRightOf="@+id/textView19"
-                android:paddingTop="15dp"
-                android:text="2500 pts      "
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                tools:background="@color/cardview_light_background" />
-
-            <ImageView
-                android:id="@+id/aractivatebutton"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/tableLayout2"
-                android:adjustViewBounds="true"
-                android:focusable="true"
-                android:onClick="connectActiveRewardsPage"
-                android:scaleType="centerInside"
-                android:text="Play Vitality Age Game and earn points!"
-                android:visibility="visible"
-                app:srcCompat="@drawable/troply_small"
-                tools:background="@color/cardview_light_background" />
-        </TableRow>
-
-        <ImageView
-            android:id="@+id/line2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/line" />
-
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/seemore"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="  See More...         "
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15sp"
-        tools:background="@color/cardview_light_background"
-        android:layout_above="@+id/dashboards"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/horizontalProgressBar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="  Choose one of the steps below to reach Bronze:"
-        android:textSize="15sp"
-        android:layout_below="@+id/textView17"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="  Next Steps"
-        android:textSize="20sp"
-        android:layout_below="@+id/textViewPoints"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="9dp" />
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#ffffff"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        tools:background="#ffffff"
-        tools:textAlignment="?android:attr/backgroundDimAmount"
-        android:id="@+id/tableRow"
-        android:layout_below="@+id/tableLayoutar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:id="@+id/skimage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/tableLayout3"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            app:srcCompat="@drawable/hf_disabled"
-            tools:background="@color/cardview_light_background" />
-
-        <TextView
-            android:id="@+id/sktext"
-            android:layout_width="160dp"
-            android:layout_height="55dp"
-            android:layout_alignLeft="@+id/tableLayout5"
-            android:layout_alignStart="@+id/tableLayout5"
-            android:layout_below="@+id/tableLayout3"
-            android:paddingLeft="10dp"
-            android:paddingTop="15dp"
-            android:text="Activate Healthy Food"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            tools:background="@color/cardview_light_background" />
-
-        <TextView
-            android:id="@+id/textViewskpts"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_alignTop="@+id/imageButton2"
-            android:layout_toEndOf="@+id/textView19"
-            android:layout_toRightOf="@+id/textView19"
-            android:paddingTop="15dp"
-            android:text="    2500 pts      "
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            tools:background="@color/cardview_light_background" />
-
-        <ImageView
-            android:id="@+id/skactivatebutton"
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/tableLayout2"
-            android:adjustViewBounds="true"
-            android:focusable="true"
-            android:onClick="connectHealthyFood"
-            android:scaleType="centerInside"
-            android:text="Play Vitality Age Game and earn points!"
-            android:visibility="visible"
-            app:srcCompat="@drawable/troply_small"
-            tools:background="@color/cardview_light_background" />
 
 
-    </TableRow>
+
+
     <ImageView
-        android:id="@+id/line31"
+        android:id="@+id/lineabovedashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/dashboards"
         app:srcCompat="@drawable/line" />
-
     <TableLayout
         android:id="@+id/dashboards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/com_facebook_button_login_silver_background"
+        android:onClick="connectLeaderboard"
+        tools:background="#f0f0f0"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/com_facebook_button_login_silver_background"
-        android:onClick="connectLeaderboard"
-        tools:background="#f0f0f0">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <TableRow
             android:layout_width="match_parent"
@@ -330,7 +75,6 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/seemore"
-            android:layout_marginTop="15dp"
             android:background="#ffffff"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -341,7 +85,7 @@
                 android:id="@+id/dashboard"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:layout_below="@+id/tableLayout3"
+                android:layout_below="@+id/firstTable"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="connectDashboardPage"
@@ -360,7 +104,7 @@
                 android:id="@+id/leaderboard"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:layout_below="@+id/tableLayout3"
+                android:layout_below="@+id/firstTable"
                 android:onClick="connectLeaderboard"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -408,14 +152,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="BRONZE CHALLENGE"
+        android:text="BRONZE CHALLENGE 10000"
         android:textAppearance="@style/Heading"
         android:textStyle="bold"
-        tools:text="BRONZE CHALLENGE"
+        tools:text="BRONZE CHALLENGE: 10000 Points"
+        android:layout_marginTop="58dp"
         android:layout_below="@+id/challenges_toolbar"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="61dp" />
+        android:layout_alignParentStart="true" />
 
     <ProgressBar
         android:id="@+id/horizontalProgressBar"
@@ -425,20 +169,13 @@
         android:layout_height="wrap_content"
         android:indeterminate="false"
         android:max="100"
-        android:minHeight="30dp"
+        android:minHeight="25dp"
         android:minWidth="200dp"
         android:progress="1"
-        android:layout_below="@+id/textView31"
+        android:layout_below="@+id/bronze_challenge"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5000 more points to get to Bronze"
-        android:layout_below="@+id/bronze_challenge"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
 
     <TextView
         android:id="@+id/textViewPoints"
@@ -447,4 +184,498 @@
         android:layout_below="@+id/horizontalProgressBar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="  Choose one of the steps below to reach Bronze:"
+        android:textSize="15sp"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/textViewPoints"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:paddingLeft="3dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="3dp"
+        android:fillViewport="true"
+        android:scrollbars = "vertical"
+        android:scrollbarStyle="insideInset"
+        android:background="@drawable/scrollbar"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/textView18"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+
+            <TableLayout
+                android:id="@+id/completedTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView18"
+                android:background="@drawable/com_facebook_button_login_silver_background"
+                tools:background="#f0f0f0">
+
+                <TableRow
+                    android:id="@+id/tr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    tools:background="#ffffff"
+                    tools:textAlignment="?android:attr/backgroundDimAmount">
+
+                    <ImageView
+                        android:id="@+id/arimage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/sktext"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        app:srcCompat="@drawable/clipboard"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="175dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageView18"
+                        android:layout_toEndOf="@+id/skimage"
+                        android:layout_toRightOf="@+id/skimage"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Complete Vitality Age"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/imageButton2"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:paddingTop="15dp"
+                        android:paddingRight="40dp"
+                        android:text="2500 pts"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <ImageView
+                        android:id="@+id/vaactivatebutton"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tableLayout2"
+                        android:adjustViewBounds="true"
+                        android:focusable="true"
+                        android:onClick="connectVitalityAgePage"
+                        android:scaleType="centerInside"
+                        android:text="Play Vitality Age Game and earn points!"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/troply_small"
+                        tools:background="@color/cardview_light_background" />
+                </TableRow>
+
+                <ImageView
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tr3"
+                    app:srcCompat="@drawable/line" />
+
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayoutar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/firstTable"
+                android:background="@drawable/com_facebook_button_login_silver_background"
+                tools:background="#f0f0f0">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    tools:background="#ffffff"
+                    tools:textAlignment="?android:attr/backgroundDimAmount">
+
+                    <ImageView
+                        android:id="@+id/activerewardsimage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/firstTable"
+                        android:paddingTop="5dp"
+                        app:srcCompat="@drawable/active_reward_logo"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/artext"
+                        android:layout_width="175dp"
+                        android:layout_height="55dp"
+                        android:layout_alignLeft="@+id/tableLayout5"
+                        android:layout_alignStart="@+id/tableLayout5"
+                        android:layout_below="@+id/firstTable"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Reach Active Rewards goal"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/textViewar20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageButton2"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:paddingTop="15dp"
+                        android:paddingRight="40dp"
+                        android:text="  300 pts"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <ImageView
+                        android:id="@+id/aractivatebutton"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tableLayout2"
+                        android:adjustViewBounds="true"
+                        android:focusable="true"
+                        android:onClick="connectActiveRewardsPage"
+                        android:scaleType="centerInside"
+                        android:text="Play Vitality Age Game and earn points!"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/troply_small"
+                        tools:background="@color/cardview_light_background" />
+                </TableRow>
+
+                <ImageView
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/line" />
+            </TableLayout>
+
+
+
+
+            <TableRow
+                android:id="@+id/tr3"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableLayoutar"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                tools:background="#ffffff"
+                tools:textAlignment="?android:attr/backgroundDimAmount">
+
+                <ImageView
+                    android:id="@+id/skimage"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/firstTable"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    app:srcCompat="@drawable/apple"
+                    tools:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:id="@+id/sktext"
+                    android:layout_width="160dp"
+                    android:layout_height="55dp"
+                    android:layout_alignLeft="@+id/tableLayout5"
+                    android:layout_alignStart="@+id/tableLayout5"
+                    android:layout_below="@+id/firstTable"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="15dp"
+                    android:text="Activate Healthy Food"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    tools:background="@color/cardview_light_background" />
+
+                <TextView
+                    android:id="@+id/textViewskpts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_alignTop="@+id/imageButton2"
+                    android:layout_toEndOf="@+id/textView19"
+                    android:layout_toRightOf="@+id/textView19"
+                    android:paddingRight="40dp"
+                    android:paddingTop="15dp"
+                    android:text=" 2500 pts"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    tools:background="@color/cardview_light_background" />
+
+                <ImageView
+                    android:id="@+id/skactivatebutton"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tableLayout2"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:onClick="connectHealthyFood"
+                    android:scaleType="centerInside"
+                    android:text="Play Vitality Age Game and earn points!"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/troply_small"
+                    tools:background="@color/cardview_light_background" />
+
+
+            </TableRow>
+
+            <ImageView
+                android:id="@+id/line44"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/lastTable"
+                app:srcCompat="@drawable/line" />
+
+            <TableLayout
+                android:id="@+id/lastTable"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_above="@+id/line45"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/moreOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignTop="@+id/imageButton2"
+                        android:layout_below="@+id/tr3"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:paddingTop="5dp"
+                        android:text=" More Options"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                    <ImageView
+                        android:id="@+id/downarrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/moreOptions"
+                        android:paddingBottom="5dp"
+                        app:srcCompat="@drawable/down_arrow" />
+                </TableRow>
+
+            </TableLayout>
+
+
+            <ImageView
+                android:id="@+id/line45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moreOptions"
+                app:srcCompat="@drawable/line" />
+            <TableLayout
+                android:id="@+id/thirdaTable"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_above="@+id/lineabovedashboard"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible"
+                    tools:background="#ffffff"
+                    tools:textAlignment="?android:attr/backgroundDimAmount">
+
+                    <ImageView
+                        android:id="@+id/arimage2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/sktext"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        app:srcCompat="@drawable/nike"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/textView192"
+                        android:layout_width="120dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageView18"
+                        android:layout_toEndOf="@+id/skimage"
+                        android:layout_toRightOf="@+id/skimage"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text=" Activate           Ster Kinekor"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/sbtextViewskpts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageButton2"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:paddingRight="45dp"
+                        android:paddingTop="15dp"
+                        android:text="Movies Discounts"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <ImageView
+                        android:id="@+id/sbactivatebutton"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tableLayout2"
+                        android:adjustViewBounds="true"
+                        android:focusable="true"
+                        android:onClick="connectHealthyFood"
+                        android:scaleType="centerInside"
+                        android:text="Play Vitality Age Game and earn points!"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/troply_small"
+                        tools:background="@color/cardview_light_background" />
+
+                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/secondTable"
+                app:srcCompat="@drawable/line" />
+
+            <TableLayout
+                android:id="@+id/secondTable"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_above="@+id/lineabovedashboard"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible"
+                    tools:background="#ffffff"
+                    tools:textAlignment="?android:attr/backgroundDimAmount">
+
+                    <ImageView
+                        android:id="@+id/healthygr"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/sktext"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        app:srcCompat="@drawable/healthy_gear"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/hgpointd2"
+                        android:layout_width="150dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageView18"
+                        android:layout_toEndOf="@+id/skimage"
+                        android:layout_toRightOf="@+id/skimage"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Activate                        Healthy Gear"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <TextView
+                        android:id="@+id/hgtextViewskpts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/imageButton2"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:paddingRight="39dp"
+                        android:paddingTop="15dp"
+                        android:text="25% cashback"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        tools:background="@color/cardview_light_background" />
+
+                    <ImageView
+                        android:id="@+id/hgactivatebutton"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tableLayout2"
+                        android:adjustViewBounds="true"
+                        android:focusable="true"
+                        android:onClick="connectHealthyFood"
+                        android:scaleType="centerInside"
+                        android:text="Play Vitality Age Game and earn points!"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/troply_small"
+                        tools:background="@color/cardview_light_background" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 </RelativeLayout>

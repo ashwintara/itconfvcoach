@@ -30,16 +30,16 @@ public class LoginActivity extends AppCompatActivity {
     public void validateLogin(View view){
         EditText textUsername= (EditText) findViewById(R.id.textUsername);
         EditText textPassword= (EditText) findViewById(R.id.textPassword);
-        if(!(textPassword.getText().toString().equals("itconf") && textUsername.getText().toString().equals("itconf"))) {
+       /* if(!(textPassword.getText().toString().equals("itconf") && textUsername.getText().toString().equals("itconf"))) {
             Toast.makeText(LoginActivity.this, "Wrong Username/Password. Please try again!", Toast.LENGTH_LONG).show();
             Log.i("Info", textPassword.getText().toString());
             Log.i("Info", textUsername.getText().toString());
         }
-        else{
+        else{*/
             Intent intent = new Intent(this, MainActivity.class);
             setinitialSharedPres();
             startActivity(intent);
-        }
+ /*       }*/
 
     }
     public void setinitialSharedPres(){

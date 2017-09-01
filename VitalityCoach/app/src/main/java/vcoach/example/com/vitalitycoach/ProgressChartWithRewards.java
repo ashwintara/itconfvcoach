@@ -13,8 +13,8 @@ public class ProgressChartWithRewards extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.progress_chart_1);
-        Snackbar mySnackBar = Snackbar.make(findViewById(R.id.constraintLayout), R.string.ar_Badge,
+      /*  Snackbar mySnackBar = Snackbar.make(findViewById(R.id.progressChart), R.string.ar_Badge,
                 Snackbar.LENGTH_LONG);
-        mySnackBar.show();
+        mySnackBar.show();*/
     }
 }

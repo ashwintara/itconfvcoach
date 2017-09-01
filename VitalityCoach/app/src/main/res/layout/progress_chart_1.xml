@@ -1,315 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/progressChart"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:id="@+id/constraintLayout"
-    android:background="@drawable/com_facebook_button_login_silver_background"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="25dp"
-    tools:layout_editor_absoluteX="0dp">
-
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:paddingBottom="5dp"
-        android:paddingEnd="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="5dp"
-        android:text="BENEFITS"
-        android:textColor="#0a0000"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="41dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:paddingBottom="5dp"
-        android:paddingEnd="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingStart="5dp"
-        android:paddingTop="5dp"
-        android:text="REWARDS"
-        android:textColor="#0a0000"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="233dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp" />
+    android:layout_width="match_parent">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        app:srcCompat="@drawable/greyhealthyfood"
-        app:layout_constraintRight_toLeftOf="@+id/textView22"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="81dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="18dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="1.0" />
+        android:id="@+id/progressBarHeader"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/progress_chart_new"
+        android:padding="10dp"
+        android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:text="Healthy Food"
-        android:textColor="@color/discovery_orange"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/imageView5"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView5" />
+    <LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+        android:layout_below="@id/progressBarHeader"
+    android:background="@drawable/com_facebook_button_login_silver_background"
+    android:weightSum="3">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="109dp"
-        android:layout_height="24dp"
-        android:text="Shoe Booster"
-        android:textColor="@color/discovery_orange"
-        android:layout_marginStart="44dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView24"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/imageView11"
-        android:layout_marginLeft="44dp" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="68dp"
+    <LinearLayout
+        android:id="@+id/benefits"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/vit_age28"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="99dp"
-        android:layout_height="27dp"
-        android:text= "Vitality Age"
-        android:textColor="@color/discovery_orange"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="168dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="168dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:text="BENEFITS"
+            android:textColor="#0a0000" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="0dp"
-        android:layout_height="87dp"
-        android:padding="5dp"
-        android:paddingBottom="5dp"
-        android:paddingEnd="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingStart="5dp"
-        app:srcCompat="@drawable/aeroplane_badge"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="9dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView25"
-        android:layout_marginEnd="9dp"
-        app:layout_constraintRight_toRightOf="@+id/textView9"
-        android:layout_marginTop="79dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintLeft_toLeftOf="@+id/textView8"
-        android:layout_marginLeft="9dp"
-        android:layout_marginRight="9dp" />
+        <LinearLayout
+            android:id="@+id/benefits_hort"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/healthy_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/greyhealthyfood" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Healthy Food"
+                    android:textColor="@color/discovery_orange" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vitality_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/vit_age28" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitality Age"
+                    android:textColor="@color/discovery_orange" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ster_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/movies_trophy" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ster Kinekor"
+                    android:textColor="@color/discovery_orange" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rewards"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Flight Booster"
-        android:textColor="@color/discovery_orange"
-        app:layout_constraintRight_toLeftOf="@+id/textView24"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView21"
-        android:layout_marginEnd="24dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView24"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="24dp" />
+        android:orientation="vertical"
+        android:layout_weight="1">
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="76dp"
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REWARDS"
+            android:textColor="#0a0000"
+            android:background="#FFFFFF"
+            android:layout_margin="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/rewards_hort"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/flight_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/aeroplane_badge" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flight booster"
+                    android:textColor="@color/discovery_orange" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/active_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/active_troply"/>
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active rewards"
+                    android:textColor="@color/discovery_orange"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/shoe_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/shoe_boosterbadge"/>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shoe booster"
+                    android:textColor="@color/discovery_orange"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/motivator_badge"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:srcCompat="@drawable/active_troply"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="17dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="110dp"
-        android:layout_height="0dp"
-        android:text="Active Rewards"
-        android:textColor="@color/discovery_orange"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        android:layout_marginStart="131dp"
-        android:layout_marginEnd="130dp"
-        app:layout_constraintRight_toRightOf="@+id/textView21"
-        android:layout_marginTop="28dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="131dp"
-        android:layout_marginRight="130dp" />
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" MOTIVATOR BADGE"
+            android:textColor="#0a0000"
+            android:background="#FFFFFF"
+            android:layout_margin="10dp"
+            android:layout_alignParentTop="true"
+            />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text=" MOTIVATOR BADGE"
-        android:textColor="#0a0000"
-        android:background="#FFFFFF"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="123dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@id/textView25">
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="90dp"
-        android:layout_height="0dp"
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@drawable/motivator_trophy" />
+        </LinearLayout>
+    </RelativeLayout>
 
-        app:srcCompat="@drawable/motivator_trophy"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="13dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:srcCompat="@drawable/movies_trophy"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="@+id/textView7"
-        android:layout_marginTop="81dp"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="82dp"
-        app:layout_constraintLeft_toLeftOf="@+id/textView26"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="8dp" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        app:srcCompat="@drawable/shoe_boosterbadge"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/imageView19"
-        android:layout_marginTop="126dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView19" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="0dp"
-        android:layout_height="26dp"
-        android:text="SterKinekor"
-        android:textColor="@color/discovery_orange"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="19dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView22"
-        android:layout_marginEnd="19dp"
-        app:layout_constraintRight_toRightOf="@+id/textView8"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/textView24"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
+</RelativeLayout>

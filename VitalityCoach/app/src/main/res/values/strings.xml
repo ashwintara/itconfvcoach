@@ -26,8 +26,12 @@
     </style>
 
     <string name="text_with_vitage">
-        \n<b>Play below Vitality Age Game and earn 2500 Points!</b>\n\n
-           Find out your Vitality Age to determine how old you are relative to your actual age.It measures all aspects of your wellness like exercise, nutrition and stress.
+      Earn 2500 points :
+\n\n
+  Find out your Vitality Age to determine how old you are relative to your actual age.
+        \n It measures all aspects of your wellness like exercise, nutrition and stress.
+\n
+  Play the Vitality Age game to earn your points.
 
     </string>
 
@@ -41,7 +45,7 @@
 
     </string>
     <string name="ar_Badge">
-        Congratulations on activating Active Rewards and completing Vitality Age!
+        Click on the Badge to share onto Social media!
     </string>
 
 
