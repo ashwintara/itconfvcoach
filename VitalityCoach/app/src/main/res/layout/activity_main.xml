@@ -156,7 +156,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:text="Swimming"
         android:layout_below="@+id/runningSwitch"
         android:layout_alignParentLeft="true"
@@ -168,7 +169,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:text="Running"
         android:layout_below="@+id/cyclingSwitch"
         android:layout_alignParentLeft="true"
@@ -180,9 +182,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:layout_centerVertical="true"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
         android:text="Cycling" />
 
 
@@ -190,14 +193,15 @@
         android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/cyclingSwitch"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:background="@color/cardview_light_background"
         android:fontFamily="sans-serif"
         android:inputType="textPersonName"
         android:text="  Health"
-        android:textAppearance="@style/SettingCodeFontBold" />
+        android:textAppearance="@style/SettingCodeFontBold"
+        android:layout_above="@+id/cyclingSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp" />
 
 
     <Switch
@@ -205,7 +209,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:text="Stop Smoking"
         android:layout_below="@+id/switch2"
         android:layout_alignParentLeft="true"
@@ -220,7 +225,8 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText4"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:text="Lose Weight" />
 
 
@@ -228,22 +234,23 @@
         android:id="@+id/freeFlightsSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
-        android:text="Free Flights" />
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:text="Free Flights"
+        android:layout_below="@+id/freeCoffeeSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Switch
         android:id="@+id/freeCoffeeSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:padding="10dp"
         android:text="Free Coffee"
-        android:layout_above="@+id/freeFlightsSwitch"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/editText6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -254,11 +261,13 @@
         android:background="@color/cardview_light_background"
         android:fontFamily="sans-serif"
         android:inputType="text"
+
         android:text="  Rewards / Benefits"
         android:textAppearance="@style/SettingCodeFontBold"
-        android:layout_above="@+id/freeCoffeeSwitch"
+        android:layout_below="@+id/stopSmokingSwitch"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:id="@+id/button"

@@ -25,8 +25,6 @@ public class VitalityAgeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vitality_age);
         SharedPreferences sharedpreferences = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-        Toast.makeText(this, "Vitality Points:" + sharedpreferences.getLong("vit_points", 0), Toast.LENGTH_LONG).show();
-
     }
 
     public void startVitalityAgeVideo(View view) {
